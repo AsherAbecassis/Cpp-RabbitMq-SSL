@@ -244,3 +244,23 @@ install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/libSimpleAmqpClient.pc
     DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig
     )
+
+
+    set(SOURCE_FILES rabbitMqApp/main.cpp)
+    add_executable(main ${SOURCE_FILES})
+    target_link_libraries(main PRIVATE SimpleAmqpClient)
+
+   
+    
+    set(SOURCE_FILES rabbitMqApp/consumer.cpp)
+    add_executable(consumer ${SOURCE_FILES})
+    target_link_libraries(consumer PRIVATE SimpleAmqpClient)
+
+    
+    set(SOURCE_FILES rabbitMqApp/producerSsl.cpp)
+    add_executable(producerSsl ${SOURCE_FILES})
+    target_link_libraries(producerSsl PRIVATE SimpleAmqpClient)
+
+    set(SOURCE_FILES rabbitMqApp/producer.cpp)
+    add_executable(producer ${SOURCE_FILES})
+    target_link_libraries(producer PRIVATE SimpleAmqpClient)
