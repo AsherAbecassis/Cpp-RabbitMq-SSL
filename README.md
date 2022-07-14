@@ -31,6 +31,8 @@ In a sibling directory to where you extracted the source code:
     cd simpleamqpclient-build
     cmake ..
     make
+    
+    ## rabbitMq over TLS runing on port 5671 amqps
     and then
     ./producerSsl publish a message to a Queue
     ./consumerSsl  to see the message 
