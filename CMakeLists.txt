@@ -264,3 +264,8 @@ install(FILES
     set(SOURCE_FILES rabbitMqApp/producer.cpp)
     add_executable(producer ${SOURCE_FILES})
     target_link_libraries(producer PRIVATE SimpleAmqpClient)
+
+
+    set(SOURCE_FILES rabbitMqApp/consumerSsl.cpp)
+    add_executable(consumerSsl ${SOURCE_FILES})
+    target_link_libraries(consumerSsl PRIVATE SimpleAmqpClient)
