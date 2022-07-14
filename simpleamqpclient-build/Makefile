@@ -226,6 +226,19 @@ producer/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/producer.dir/build.make CMakeFiles/producer.dir/build
 .PHONY : producer/fast
 
+#=============================================================================
+# Target rules for targets named consumerSsl
+
+# Build rule for target.
+consumerSsl: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 consumerSsl
+.PHONY : consumerSsl
+
+# fast build rule for target.
+consumerSsl/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/consumerSsl.dir/build.make CMakeFiles/consumerSsl.dir/build
+.PHONY : consumerSsl/fast
+
 rabbitMqApp/consumer.o: rabbitMqApp/consumer.cpp.o
 .PHONY : rabbitMqApp/consumer.o
 
@@ -249,6 +262,30 @@ rabbitMqApp/consumer.s: rabbitMqApp/consumer.cpp.s
 rabbitMqApp/consumer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/consumer.dir/build.make CMakeFiles/consumer.dir/rabbitMqApp/consumer.cpp.s
 .PHONY : rabbitMqApp/consumer.cpp.s
+
+rabbitMqApp/consumerSsl.o: rabbitMqApp/consumerSsl.cpp.o
+.PHONY : rabbitMqApp/consumerSsl.o
+
+# target to build an object file
+rabbitMqApp/consumerSsl.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/consumerSsl.dir/build.make CMakeFiles/consumerSsl.dir/rabbitMqApp/consumerSsl.cpp.o
+.PHONY : rabbitMqApp/consumerSsl.cpp.o
+
+rabbitMqApp/consumerSsl.i: rabbitMqApp/consumerSsl.cpp.i
+.PHONY : rabbitMqApp/consumerSsl.i
+
+# target to preprocess a source file
+rabbitMqApp/consumerSsl.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/consumerSsl.dir/build.make CMakeFiles/consumerSsl.dir/rabbitMqApp/consumerSsl.cpp.i
+.PHONY : rabbitMqApp/consumerSsl.cpp.i
+
+rabbitMqApp/consumerSsl.s: rabbitMqApp/consumerSsl.cpp.s
+.PHONY : rabbitMqApp/consumerSsl.s
+
+# target to generate assembly for a file
+rabbitMqApp/consumerSsl.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/consumerSsl.dir/build.make CMakeFiles/consumerSsl.dir/rabbitMqApp/consumerSsl.cpp.s
+.PHONY : rabbitMqApp/consumerSsl.cpp.s
 
 rabbitMqApp/main.o: rabbitMqApp/main.cpp.o
 .PHONY : rabbitMqApp/main.o
@@ -576,12 +613,16 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... SimpleAmqpClient"
 	@echo "... consumer"
+	@echo "... consumerSsl"
 	@echo "... main"
 	@echo "... producer"
 	@echo "... producerSsl"
 	@echo "... rabbitMqApp/consumer.o"
 	@echo "... rabbitMqApp/consumer.i"
 	@echo "... rabbitMqApp/consumer.s"
+	@echo "... rabbitMqApp/consumerSsl.o"
+	@echo "... rabbitMqApp/consumerSsl.i"
+	@echo "... rabbitMqApp/consumerSsl.s"
 	@echo "... rabbitMqApp/main.o"
 	@echo "... rabbitMqApp/main.i"
 	@echo "... rabbitMqApp/main.s"
