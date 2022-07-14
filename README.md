@@ -30,6 +30,10 @@ In a sibling directory to where you extracted the source code:
     mkdir simpleamqpclient-build
     cd simpleamqpclient-build
     cmake ..
+    make
+    and then
+    ./producerSsl publish a message to a Queue
+    ./consumer  to see the message 
 
 Then use your the appropriate build utility to build the library (make, msbuild)
 
